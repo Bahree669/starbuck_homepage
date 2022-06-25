@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Freight Sans";
+    src: url("/assets/freight_sans_book-webfont.woff2") format("woff2"),
+        url("/assets/freight_sans_book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Freight Sans Medium";
+    src: url("/assets/freight_sans_medium-webfont.woff2") format("woff2"),
+        url("/assets/freight_sans_medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==================================== */
+/* ROOT */
+/* ==================================== */
+:root {
+    --c-accent-green: #007246;
+    --c-accent-darkGreen: #202529;
+    --c-accent-dark: #1e1e1e;
+    --c-accent-lightGreen: #008c25;
+    --c-accent-darkGrey: #f0f0f0;
+    --c-accent-lightGrey: #677e5e;
+    --c-accent-superLightGrey: #f7f7f7;
+
+    --fc-dirt: #8d6565;
+    --fc-darkDirt: #5a4040;
+
+    --ff-main: "Freight Sans";
+
+    --max-width: 500px;
+    --max-width-dekstop: 1440px;
+
+    --slightGrey-border: solid 1.5px #d7d7d7;
+    /* --navbarDekstop: rotateX(40deg) translate(0, 0); */
+    /* --navbarDekstop-open: rotateX(0) translate(0, 0); */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Kode di bawah memperbaiki isu elemen yang tertutup navigasi ketika melakukan redireksi */
+[id] {
+    scroll-padding-top: 4em;
+}
+
+/* ==================================== */
+/* GENERAL STYLING */
+/* ==================================== */
+.srOnly {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bodyOverflow {
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-maxWidth {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+@media screen and (min-width: 750px) {
+    .content-maxWidth {
+        --max-width: 700px;
+    }
+}
+@media screen and (min-width: 990px) {
+    .content-maxWidth {
+        --max-width: 950px;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .content-maxWidth {
+        --max-width: 1330px;
+    }
+}
+
+button i {
+    pointer-events: none;
+}
+/* ==================================== */
+/* HERO AND IMAGE CONTAINER */
+/* ==================================== */
+.imageSection {
+    max-width: 2400px;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url(https://www.starbucks.co.id/storage/temporary/mobile/1647486840-cKIc9w.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imageSection:nth-child(2) {
+    background-image: url(https://www.starbucks.co.id/storage/temporary/mobile/1647486840-ALGsYW.jpg);
+}
+.imageSection:nth-child(3) {
+    background-image: url(https://www.starbucks.co.id/storage/temporary/mobile/1647486840-eOu2pT.jpg);
+}
+.imageSection:nth-child(4) {
+    background-image: url(https://www.starbucks.co.id/storage/temporary/mobile/1647486840-sbAJRm.jpg);
+}
+.imageSection:nth-child(5) {
+    background-image: url(https://www.starbucks.co.id/storage/temporary/mobile/1647486840-ueBbjF.jpg);
+}
+
+@media screen and (min-width: 540px) {
+    .imageSection {
+        height: 393px;
+        background-image: url(https://www.starbucks.co.id/storage/temporary/desktop/1647486840-bGMTut.jpg);
+    }
+    .imageSection:nth-child(2) {
+        background-image: url(https://www.starbucks.co.id/storage/temporary/desktop/1647486840-jfivjq.jpg);
+    }
+    .imageSection:nth-child(3) {
+        background-image: url(https://www.starbucks.co.id/storage/temporary/desktop/1647486840-Xe4zwD.jpg);
+    }
+    .imageSection:nth-child(4) {
+        background-image: url(https://www.starbucks.co.id/storage/temporary/desktop/1647486840-Os8dJo.jpg);
+    }
+    .imageSection:nth-child(5) {
+        background-image: url(https://www.starbucks.co.id/storage/temporary/desktop/1647486840-cnp3Pc.jpg);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .imageSection {
+        height: 360px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .imageSection {
+        height: 560px;
+    }
+}

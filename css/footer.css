@@ -1,0 +1,127 @@
+footer {
+    background: var(--c-accent-superLightGrey);
+    position: relative;
+}
+footer::after {
+    content: "";
+    height: 0.5em;
+    width: 100%;
+    background: var(--c-accent-green);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footerTop {
+    background: var(--c-accent-darkGrey);
+    padding: 0.9em;
+}
+.footerTop ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+.footerTop ul li a {
+    font-size: 2.3em;
+}
+
+.footerBottom-right {
+    display: none;
+}
+
+.footerMenu {
+    padding: 1em;
+    padding-bottom: 0;
+}
+.footerMenu ul {
+    overflow: hidden;
+    height: 0;
+    row-gap: 0;
+    transition: height 0.4s ease;
+}
+.footerMenu ul li {
+    padding: 0.5em 0;
+}
+.footerMenu-nav {
+    justify-content: space-between;
+    padding-bottom: 0.4em;
+    border-bottom: var(--slightGrey-border);
+}
+.footerMenu-nav button {
+    font-size: 1.5rem;
+    height: 30px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+.footerMenu-nav button.buttonClicked {
+    transform: rotate(180deg);
+}
+
+.footerConcent {
+    padding: 1em;
+}
+.footerConcent ul.flex-col {
+    --gap: 1.5em;
+}
+.footerCopy {
+    padding: 1em;
+    padding-bottom: 1.5em;
+}
+
+@media screen and (min-width: 990px) {
+    .footerTop {
+        padding: 2em 0;
+    }
+    .footerTop ul {
+        padding: 1em;
+        justify-content: flex-start;
+    }
+
+    .footerMenu-nav {
+        border: none;
+        margin-bottom: 1em;
+    }
+    .footerMenu-nav button {
+        display: none;
+    }
+    .footerMenu ul {
+        height: auto;
+    }
+
+    .footerBottom {
+        margin-bottom: 1.5em;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+    }
+    .footerBottom-right {
+        display: flex;
+    }
+    .footerBottom-right img {
+        margin-top: 2em;
+        height: 10em;
+    }
+    .footerBottom-left {
+        display: flex;
+        gap: 2em;
+        height: fit-content;
+    }
+
+    .footerConcent {
+        margin-bottom: 1em;
+    }
+    .footerConcent ul.flex-col {
+        flex-direction: row;
+        gap: 1.5em;
+    }
+    .footerConcent ul li {
+        border-right: solid 2px var(--c-accent-lightGrey);
+        padding-right: 1em;
+    }
+    .footerConcent ul li:last-of-type {
+        border: none;
+    }
+}
